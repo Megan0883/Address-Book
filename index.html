@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Polly Contact Directory</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Polly <span>Directory</span></div>
+    <div class="global-search-wrap">
+      <input type="text" id="globalSearch" class="global-search-input" placeholder="Search everything — carriers, internal, agents…" autocomplete="off" />
+    </div>
+    <nav class="tab-nav" id="mainNav">
+      <button class="tab-btn active" data-tab="carriers">Carriers</button>
+      <button class="tab-btn" data-tab="internal">Internal</button>
+      <button class="tab-btn" data-tab="agents">Franchise Agents</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- GLOBAL SEARCH RESULTS -->
+  <section id="tab-search" class="tab-section" style="display:none">
+    <p class="result-count" id="globalCount"></p>
+    <div id="searchCarriersWrap">
+      <div class="search-group-heading">Carriers</div>
+      <div class="card-grid" id="searchCarrierGrid"></div>
+    </div>
+    <div id="searchInternalWrap">
+      <div class="search-group-heading">Internal Contacts</div>
+      <div id="searchInternalResults" class="info-table" style="border-radius:10px;overflow:hidden;margin-bottom:24px"></div>
+    </div>
+    <div id="searchAgentsWrap">
+      <div class="search-group-heading">Franchise Agents</div>
+      <div class="agent-grid" id="searchAgentGrid"></div>
+    </div>
+    <p class="no-results" id="globalNoResults" style="display:none">No results found.</p>
+  </section>
+
+  <!-- CARRIERS TAB -->
+  <section id="tab-carriers" class="tab-section active">
+    <p class="result-count" id="carrierCount"></p>
+    <div class="card-grid" id="carrierGrid"></div>
+    <p class="no-results" id="carrierNoResults" style="display:none">No carriers match your search.</p>
+  </section>
+
+  <!-- INTERNAL TAB -->
+  <section id="tab-internal" class="tab-section">
+    <h2 class="section-heading">Polly Internal Contacts</h2>
+    <div class="internal-group">
+      <h3 class="group-heading">Polly Hours &amp; Main Lines</h3>
+      <div class="info-table">
+        <div class="info-row"><div class="info-label">Address</div><div class="info-val">2300 St George Rd, Williston, VT 05495</div></div>
+        <div class="info-row"><div class="info-label">Main Phone</div><div class="info-val">802-655-9000</div></div>
+        <div class="info-row"><div class="info-label">Fax (General)</div><div class="info-val">802-871-5609</div></div>
+        <div class="info-row"><div class="info-label">Fax (RTA Forms)</div><div class="info-val">917-695-2696 — fax RTA forms to get stamped</div></div>
+        <div class="info-row"><div class="info-label">Sales (Non-TruStage)</div><div class="info-val">855-330-6155 &nbsp;|&nbsp; M–F 9am–8pm EST</div></div>
+        <div class="info-row"><div class="info-label">Sales (TruStage)</div><div class="info-val">855-962-8989 &nbsp;|&nbsp; M–F 9am–8pm EST</div></div>
+        <div class="info-row"><div class="info-label">Service Center</div><div class="info-val">855-951-6188 &nbsp;|&nbsp; M–F 8am–6pm EST</div></div>
+        <div class="info-row"><div class="info-label">Customer Service Email</div><div class="info-val"><a href="mailto:customerservice@polly.co">customerservice@polly.co</a> — personal lines service requests (customers)</div></div>
+        <div class="info-row"><div class="info-label">Carrier Care Email</div><div class="info-val"><a href="mailto:customercare@polly.co">customercare@polly.co</a> — personal lines service requests (carriers)</div></div>
+        <div class="info-row"><div class="info-label">Commercial &amp; Front Desk</div><div class="info-val">802-655-9000 &nbsp;|&nbsp; M–F 9am–5pm EST</div></div>
+        <div class="info-row"><div class="info-label">BN / Fishkill NY</div><div class="info-val">845-896-4700 &nbsp;|&nbsp; M–F 8:30am–5pm EST</div></div>
+      </div>
+    </div>
+    <div class="internal-group">
+      <h3 class="group-heading">Dealer Success</h3>
+      <div class="info-table">
+        <div class="info-row"><div class="info-label">General #</div><div class="info-val">855-344-9033 Option 3 &nbsp;|&nbsp; <a href="mailto:clientsuccess@polly.co">clientsuccess@polly.co</a></div></div>
+        <div class="info-row"><div class="info-label">Book a Demo</div><div class="info-val"><a href="mailto:dealership@polly.co">dealership@polly.co</a> — for dealerships interested in partnering</div></div>
+        <div class="info-row"><div class="info-label">Hours</div><div class="info-val">M–F 9am–6pm EST</div></div>
+        <div class="info-row"><div class="info-label">Maryellen Florentino</div><div class="info-val">855-974-3622</div></div>
+        <div class="info-row"><div class="info-label">Michelle Walker</div><div class="info-val">855-974-7428</div></div>
+        <div class="info-row"><div class="info-label">Tyson Clark</div><div class="info-val">855-974-9337</div></div>
+        <div class="info-row"><div class="info-label">Zach Scogna</div><div class="info-val">855-974-2267</div></div>
+        <div class="info-row"><div class="info-label">Not listed?</div><div class="info-val">Transfer to general # and select option 3</div></div>
+      </div>
+    </div>
+    <div class="internal-group">
+      <h3 class="group-heading">Agent / Team Contacts</h3>
+      <div class="info-table">
+        <div class="info-row"><div class="info-label">Attendance Line</div><div class="info-val">802-552-3552 — agent call outs (manager VM)</div></div>
+        <div class="info-row"><div class="info-label">BN (Fishkill NY)</div><div class="info-val">845-896-4700 — forward misrouted emails to <a href="mailto:info@polly.co">info@polly.co</a></div></div>
+        <div class="info-row"><div class="info-label">Call Center Managers</div><div class="info-val"><a href="mailto:callcentermanagers@polly.co">callcentermanagers@polly.co</a> — escalations &amp; manager attention</div></div>
+        <div class="info-row"><div class="info-label">Call Center Operations</div><div class="info-val"><a href="mailto:callcenteroperations@polly.co">callcenteroperations@polly.co</a> — carrier appointments, credentials, licensing</div></div>
+        <div class="info-row"><div class="info-label">Commercial (COI)</div><div class="info-val"><a href="mailto:certificate@polly.co">certificate@polly.co</a> — customers requesting certificates of insurance</div></div>
+        <div class="info-row"><div class="info-label">Commercial Lines New Biz</div><div class="info-val">Commercial Referral Form — for commercial quote requests</div></div>
+        <div class="info-row"><div class="info-label">Commercial Service</div><div class="info-val"><a href="mailto:CLInbox@polly.co">CLInbox@polly.co</a> — forward misrouted emails or requests</div></div>
+        <div class="info-row"><div class="info-label">Commissions</div><div class="info-val"><a href="mailto:commissions@polly.co">commissions@polly.co</a> — commission questions</div></div>
+        <div class="info-row"><div class="info-label">Customer Do Not Call</div><div class="info-val"><a href="mailto:customersuccess@polly.co">customersuccess@polly.co</a> — include customer name &amp; phone #</div></div>
+        <div class="info-row"><div class="info-label">Finance / Payroll</div><div class="info-val"><a href="mailto:payroll@polly.co">payroll@polly.co</a> — paycheck questions</div></div>
+        <div class="info-row"><div class="info-label">Accounting</div><div class="info-val"><a href="mailto:accounting@polly.co">accounting@polly.co</a> — carrier statements &amp; inquiries</div></div>
+        <div class="info-row"><div class="info-label">HR</div><div class="info-val"><a href="mailto:hr@polly.co">hr@polly.co</a> — HR questions</div></div>
+        <div class="info-row"><div class="info-label">Insurance Help</div><div class="info-val">Slack: #Insurance-Help — SME ticket requests</div></div>
+        <div class="info-row"><div class="info-label">Office Manager</div><div class="info-val"><a href="mailto:officemanager@polly.co">officemanager@polly.co</a> — request docs to be mailed</div></div>
+        <div class="info-row"><div class="info-label">TruStage Misdirected Calls</div><div class="info-val">855-591-9025 — transfer TruStage customers not seeking auto/home</div></div>
+        <div class="info-row"><div class="info-label">TruStage Life Policy Svc</div><div class="info-val">Warm Transfer: 833-492-1489 &nbsp;|&nbsp; Customer Direct: 888-787-8243</div></div>
+        <div class="info-row"><div class="info-label">GEICO Transfer (DCO)</div><div class="info-val">855-568-6925 — customers with GEICO quote via Fastpass/Polly platform</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANCHISE AGENTS TAB -->
+  <section id="tab-agents" class="tab-section">
+    <h2 class="section-heading">Polly Franchise Agents</h2>
+    <div class="agent-grid" id="agentGrid"></div>
+    <p class="no-results" id="agentNoResults" style="display:none">No agents found.</p>
+  </section>
+
+</main>
+
+<!-- CARRIER DETAIL MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
