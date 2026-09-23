@@ -22,6 +22,15 @@ window.CARRIERS = [
     hours: "M–F 9am–7pm EST, Sat 10am–2pm EST"
   },
   {
+    name: "American Collectors",
+    serviceCenter: null,
+    agentSupport: {},
+    uw: {},
+    claims: { phone: "866-986-9407" },
+    changeRequest: "",
+    hours: ""
+  },
+  {
     name: "American Integrity",
     serviceCenter: null,
     agentSupport: { phone: "866-968-8390" },
@@ -71,7 +80,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "855-438-5411", email: "agencysupport@ourbranch.com", chat: true, note: "Chat preferred" },
     uw: {},
-    claims: { note: "Direct customer to mobile app or file online" },
+    claims: { phone: "855-540-9642", note: "Or direct customer to mobile app / file online" },
     changeRequest: "Must endorse in carrier site or call/chat Agent Support",
     hours: "M–F 9am–7pm ET"
   },
@@ -89,7 +98,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-777-2131", email: "customercenter@chubb.com" },
     uw: { phone: "908-572-3837", email: "UWSupport@chubb.com" },
-    claims: { phone: "800-777-2131" },
+    claims: { phone: "800-682-4822" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–8pm EST"
   },
@@ -125,7 +134,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-852-3380" },
     uw: { name: "Reba Mistretta", phone: "800-852-3380 x6296", email: "rmistretta@concordgroupins.com" },
-    claims: { phone: "ME: 800-482-7443 | MA: 800-422-5246 | NH: 800-888-6050 | VT: 800-660-3838" },
+    claims: { phone: "800-888-6050" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
   },
