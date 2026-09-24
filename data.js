@@ -188,7 +188,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "866-424-6726" },
     uw: {},
-    claims: { phone: "800-424-6726" },
+    claims: { phone: "866-424-6726" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–6pm CST"
   },
