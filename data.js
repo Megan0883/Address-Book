@@ -563,7 +563,6 @@ window.AGENTS = [
   { name: "Jeff Dion", agency: "Vermont Trusted Insurance", email: "jeff.dion@pollyagent.com", phone: "802-662-0622" },
   { name: "Jyldyz Jakypova", agency: "Star Insurance Group", email: "jyldyz.jakypova@pollyagent.com", phone: "215-960-1310" },
   { name: "Kimberly Saldana", agency: "Branch", email: "kimberly.saldana@pollyagent.com", phone: "833-327-2624 x3008" },
-  { name: "Kristi Wilson", agency: "Branch", email: "kristi.wilson@pollyagent.com", phone: "" },
   { name: "Mariah Azzouni", agency: "Branch", email: "Mariah.Azzouni@pollyagent.com", phone: "833-327-2624 x1061" },
   { name: "Mark Vesosky", agency: "MAV Insurance", email: "mark.vesosky@pollyagent.com", phone: "802-734-9197" },
   { name: "Megan Shay", agency: "Branch", email: "megan.shay@pollyagent.com", phone: "833-327-2624 x3011" },
