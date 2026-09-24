@@ -24,6 +24,7 @@ const LOGO_MAP = {
   'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
   'American Modern':                        'american-modern.jpg',
+  'Annex Risk':                             'annex-risk.png',
   'Arbella':                                'arbella logo.png',
   'Branch':                                 'branch.png',
   'Bristol West':                           'bw.png',
