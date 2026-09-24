@@ -33,7 +33,7 @@ window.CARRIERS = [
   {
     name: "American Integrity",
     serviceCenter: null,
-    agentSupport: { phone: "866-968-8390" },
+    agentSupport: { phone: "866-968-8390", chat: true, chatUrl: "https://origin.aii.com/agent-portal/florida" },
     uw: {},
     claims: { phone: "866-277-9871" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",

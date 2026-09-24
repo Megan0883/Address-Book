@@ -153,7 +153,7 @@ function renderCarrierCards(list, gridId) {
 
         <div class="card-body">
           ${agentPhone ? `<div class="card-row"><span class="card-row-label">Agent Support</span><span class="card-row-val">${makeLink(agentPhone)}</span></div>` : ''}
-          ${ag.chat ? `<div class="card-row"><span class="card-row-label"></span><span class="card-row-val"><span class="info-badge chat-badge">💬 Chat available</span></span></div>` : ''}
+          ${ag.chat ? `<div class="card-row"><span class="card-row-label"></span><span class="card-row-val">${ag.chatUrl ? `<a href="${escHtml(ag.chatUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="info-badge chat-badge">💬 Open chat</a>` : '<span class="info-badge chat-badge">💬 Chat available</span>'}</span></div>` : ''}
           ${claimsPhone ? `<div class="card-row"><span class="card-row-label">Claims</span><span class="card-row-val">${makeLink(claimsPhone)}</span></div>` : ''}
           ${c.changeRequest ? `<div class="card-row"><span class="card-row-label">Service Request</span><span class="card-row-val">${makeLink(c.changeRequest)}</span></div>` : ''}
         </div>
@@ -238,7 +238,7 @@ function openCarrierModal(idx) {
     ['Phone', ag.phone],
     ['Name', ag.name],
     ['Email', ag.email],
-    ['Chat', ag.chat ? 'Chat available' : null],
+    ['Chat', ag.chat ? (ag.chatUrl || 'Chat available') : null],
     ['Note', ag.note],
   ]);
 
