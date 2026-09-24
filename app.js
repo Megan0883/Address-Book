@@ -67,6 +67,7 @@ const LOGO_MAP = {
   'Orchid':                                 'orchid.png',
   'Personal Umbrella':                      'personal-umbrella.png',
   'Plymouth Rock':                          'plymouth.png',
+  'Preferred Mutual':                       'preferred-mutual.png',
   'Progressive':                            'progress.png',
   'ASI / Progressive Home':                 'progress.png',
   'PURE':                                   'pure.png',
