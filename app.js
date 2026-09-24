@@ -75,6 +75,7 @@ const LOGO_MAP = {
   'Liberty Mutual (Safeco)':               'safeco (2).png',
   'S-H Underwriters':                       'sh-underwriters.png',
   'Slide':                                  'slide.png',
+  'Steadily':                               'steadily.png',
   'Stillwater':                             'stillwater.png',
   'Travelers':                              'travelers.png',
   'Utica National':                         'utica.png',
