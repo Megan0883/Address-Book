@@ -547,7 +547,7 @@ window.CARRIERS = [
 ];
 
 window.AGENTS = [
-  { name: "Ailyn Ravelo", agency: "", email: "aravelo@pollyagent.com", phone: "786-384-3949" },
+  { name: "Ailyn Ravelo", agency: "South Florida Assurance LLC", email: "aravelo@pollyagent.com", phone: "786-384-3949" },
   { name: "Alexandria Dellafera", agency: "Branch", email: "Alexandria.Dellafera@pollyagent.com", phone: "833-327-2624 x1187" },
   { name: "Alexia Jeffries", agency: "Branch", email: "alexia.jeffries@pollyagent.com", phone: "833-327-2624 x3017" },
   { name: "Agustin Maldonado", agency: "Branch", email: "auggie.maldonado@pollyagent.com", phone: "833-327-2624 x3013" },
@@ -568,7 +568,7 @@ window.AGENTS = [
   { name: "Mark Vesosky", agency: "MAV Insurance", email: "mark.vesosky@pollyagent.com", phone: "802-734-9197" },
   { name: "Megan Shay", agency: "Branch", email: "megan.shay@pollyagent.com", phone: "833-327-2624 x3011" },
   { name: "Michelle Moss", agency: "Branch", email: "michelle.moss@pollyagent.com", phone: "833-327-2624 x3020" },
-  { name: "Mike Trimboli", agency: "", email: "mike.trimboli@pollyagent.com", phone: "203-585-3138" },
+  { name: "Mike Trimboli", agency: "Trimboli Insurance Agency", email: "mike.trimboli@pollyagent.com", phone: "203-585-3138" },
   { name: "Sarah Christly", agency: "Branch", email: "sarah.christly@pollyagent.com", phone: "833-327-2624 x3021" },
   { name: "Sierra Faulk", agency: "Branch", email: "sierra.faulk@pollyagent.com", phone: "833-327-2624 x3026" },
   { name: "Shameka Bolden", agency: "Branch", email: "shameka.bolden@pollyagent.com", phone: "833-327-2624 x3019"},

@@ -15,7 +15,7 @@ function avatarColor(name) {
 }
 
 function initials(name) {
-  return name.split(/\s+/).map(w => w[0] || '').join('').substring(0, 2).toUpperCase();
+  return name.split(/\s+/).filter(w => /^[a-z]/i.test(w)).map(w => w[0]).join('').substring(0, 2).toUpperCase();
 }
 
 const LOGO_MAP = {
@@ -346,25 +346,50 @@ function carrierMatchesQuery(c, q) {
 
 // ===== AGENTS =====
 
-function renderAgents(list, gridId) {
-  const grid = document.getElementById(gridId || 'agentGrid');
-  if (!grid) return;
-  grid.innerHTML = list.map(a => {
-    const [bg, fg] = avatarColor(a.name);
-    return `
-      <div class="agent-card">
-        <div class="agent-avatar" style="background:${bg};color:${fg}">${initials(a.name)}</div>
-        <div>
-          <div class="agent-name">${escHtml(a.name)}</div>
-          ${a.agency ? `<div class="agent-agency">${escHtml(a.agency)}</div>` : '<div class="agent-agency">&nbsp;</div>'}
-          <div class="agent-detail">
-            ${a.phone ? `<span>📞 ${escHtml(a.phone)}</span><br>` : ''}
-            ${a.email ? `<span>✉️ <a href="mailto:${escHtml(a.email)}">${escHtml(a.email)}</a></span>` : ''}
-          </div>
-        </div>
+const BRANCH_MAIN = '833-327-2624';
+
+function agentCard(a, extOnly) {
+  const [bg, fg] = avatarColor(a.name);
+  const ext = extOnly && a.phone && a.phone.startsWith(BRANCH_MAIN) ? a.phone.slice(BRANCH_MAIN.length).trim() : '';
+  const phoneHtml = ext
+    ? `<div class="agent-ext">${escHtml(ext)}</div>`
+    : (a.phone ? `<div class="contact-line">${PHONE_ICON}<span class="nowrap">${escHtml(a.phone)}</span></div>` : '');
+  return `
+    <div class="agent-card">
+      <div class="agent-avatar" style="background:${bg};color:${fg}">${initials(a.name)}</div>
+      <div class="agent-info">
+        <div class="agent-name">${escHtml(a.name)}</div>
+        ${a.agency && !extOnly ? `<div class="agent-agency">${escHtml(a.agency)}</div>` : ''}
+        ${phoneHtml}
+        ${a.email ? `<div class="contact-line">${MAIL_ICON}<a href="mailto:${escHtml(a.email)}">${escHtml(a.email).replace('@', '<wbr>@')}</a></div>` : ''}
       </div>
-    `;
-  }).join('');
+    </div>`;
+}
+
+// Flat list (used by global search)
+function renderAgents(list, gridId) {
+  const grid = document.getElementById(gridId);
+  if (grid) grid.innerHTML = list.map(a => agentCard(a, false)).join('');
+}
+
+// Grouped Franchise Agents tab
+function renderAgentGroups() {
+  const wrap = document.getElementById('agentGroups');
+  if (!wrap) return;
+  const byName = (x, y) => x.name.localeCompare(y.name);
+  const branch = window.AGENTS.filter(a => a.agency === 'Branch').sort(byName);
+  const indep = window.AGENTS.filter(a => a.agency && a.agency !== 'Branch').sort((x, y) => x.agency.localeCompare(y.agency) || byName(x, y));
+  const none = window.AGENTS.filter(a => !a.agency).sort(byName);
+  const group = (title, sub, list, extOnly) => list.length ? `
+    <div class="internal-group">
+      <h3 class="group-heading">${title}</h3>
+      ${sub ? `<p class="group-sub">${sub}</p>` : ''}
+      <div class="agent-grid">${list.map(a => agentCard(a, extOnly)).join('')}</div>
+    </div>` : '';
+  wrap.innerHTML =
+    group(`Branch <span class="group-count">${branch.length}</span>`, `${PHONE_ICON}<span>Call <strong class="nowrap">${BRANCH_MAIN}</strong>, then dial the agent's extension</span>`, branch, true) +
+    group(`Independent Agencies <span class="group-count">${indep.length}</span>`, '', indep, false) +
+    group(`Agency Not Listed <span class="group-count">${none.length}</span>`, '', none, false);
 }
 
 // ===== INTERNAL CONTACTS =====
@@ -498,6 +523,6 @@ document.getElementById('mainNav').addEventListener('click', e => {
 
 // ===== INIT =====
 renderCarrierCards(window.CARRIERS);
-renderAgents(window.AGENTS, 'agentGrid');
+renderAgentGroups();
 renderInternal();
 
