@@ -33,7 +33,7 @@ window.CARRIERS = [
   {
     name: "American Integrity",
     serviceCenter: null,
-    agentSupport: { phone: "866-968-8390" },
+    agentSupport: { phone: "866-968-8390", chat: true, chatUrl: "https://origin.aii.com/agent-portal/florida" },
     uw: {},
     claims: { phone: "866-277-9871" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
@@ -409,6 +409,15 @@ window.CARRIERS = [
     hours: "M–F 9am–8pm EST"
   },
   {
+    name: "Orchid",
+    serviceCenter: null,
+    agentSupport: { phone: "866-370-6505" },
+    uw: {},
+    claims: { note: "File online: https://orchidinsurance.com/claims/" },
+    changeRequest: "",
+    hours: ""
+  },
+  {
     name: "Personal Umbrella",
     serviceCenter: null,
     agentSupport: { phone: "800-564-1799", note: "Tech Support: opt. 7 | FL quotes: Mary Nyquist x3311 mnyquist@mymga.com" },
@@ -429,7 +438,7 @@ window.CARRIERS = [
   {
     name: "Preferred Mutual",
     serviceCenter: null,
-    agentSupport: { email: "customerservice@preferredmutual.com", note: "Billing, coverages, payment questions" },
+    agentSupport: { phone: "800-333-7642", email: "customerservice@preferredmutual.com", note: "Billing, coverages, payment questions" },
     uw: {},
     claims: { phone: "800-333-7642" },
     changeRequest: "Policy changes: pcr1@preferredmutual.com",
@@ -472,6 +481,15 @@ window.CARRIERS = [
     claims: { phone: "866-230-3758", email: "claims@slideinsurance.com" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
+  },
+  {
+    name: "Steadily",
+    serviceCenter: null,
+    agentSupport: { phone: "855-408-6470", email: "agent-support@steadily.com", chat: true },
+    uw: { phone: "855-408-6470", email: "underwriting@steadily.com" },
+    claims: { phone: "888-966-1611" },
+    changeRequest: "",
+    hours: ""
   },
   {
     name: "Stillwater",
