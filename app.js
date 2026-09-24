@@ -38,7 +38,7 @@ const LOGO_MAP = {
   'Encompass':                              'encompass.png',
   'Countryway':                             'country.png',
   'Foremost Signature':                     'foremost.png',
-  'Foremost STAR':                          'foremost.png',
+  'Foremost STAR':                          'foremost-star.png',
   'Gainsco':                                'gainsco.png',
   'GeoVera':                                'geovera.png',
   'The General':                            'general.png',
