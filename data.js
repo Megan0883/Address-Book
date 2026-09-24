@@ -561,7 +561,6 @@ window.AGENTS = [
   { name: "Ian Prastien", agency: "LIL Insurance Agency", email: "ian.prastien@pollyagent.com", phone: "845-896-4700" },
   { name: "Jake Hurwitz", agency: "Black Bear Insurance", email: "insuranceblackbear@gmail.com", phone: "781-467-8777" },
   { name: "Jeff Dion", agency: "Vermont Trusted Insurance", email: "jeff.dion@pollyagent.com", phone: "802-662-0622" },
-  { name: "Jennifer Perez", agency: "Branch", email: "jennifer.perez@pollyagent.com", phone: "704-426-0446" },
   { name: "Jyldyz Jakypova", agency: "Star Insurance Group", email: "jyldyz.jakypova@pollyagent.com", phone: "215-960-1310" },
   { name: "Kimberly Saldana", agency: "Branch", email: "kimberly.saldana@pollyagent.com", phone: "833-327-2624 x3008" },
   { name: "Kristi Wilson", agency: "Branch", email: "kristi.wilson@pollyagent.com", phone: "" },
