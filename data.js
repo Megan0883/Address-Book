@@ -143,7 +143,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "877-367-6572", email: "billing@countryway.com", note: "Billing email" },
     uw: { email: "KY: Patrick Izac 315-634-5275 pizac@countryway.com | ME: Dennis Jeter 315-634-5288 djeter@countryway.com | NY: Joni Murphy 315-634-5264 jmurphy@countryway.com | PA: Justin Dorr 315-634-5257 jdorr@countryway.com | New biz quotes: quotes@countryway.com" },
-    claims: { phone: "Report: 888-223-3649 | Claims Dept: 800-828-6862" },
+    claims: { phone: "800-828-6862" },
     changeRequest: "Cancellations must be processed by Countryway — send signed LPR to underwriting@countryway.com",
     hours: "M–F 8am–4:30pm EST"
   },
