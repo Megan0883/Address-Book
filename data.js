@@ -438,7 +438,7 @@ window.CARRIERS = [
   {
     name: "Preferred Mutual",
     serviceCenter: null,
-    agentSupport: { email: "customerservice@preferredmutual.com", note: "Billing, coverages, payment questions" },
+    agentSupport: { phone: "800-333-7642", email: "customerservice@preferredmutual.com", note: "Billing, coverages, payment questions" },
     uw: {},
     claims: { phone: "800-333-7642" },
     changeRequest: "Policy changes: pcr1@preferredmutual.com",
