@@ -431,7 +431,7 @@ window.CARRIERS = [
     serviceCenter: { phone: "800-437-5556", note: "NJ & PA ONLY" },
     agentSupport: { phone: "Auto/Umbrella: 833-511-7625 | Home: 844-208-1935", note: "908-790-7800 opt. 5 | Home: Nick Bartlett 617-428-1945 nbartlett@plymouthrock.com", chat: true },
     uw: { phone: "908-790-7800 Opt 5" },
-    claims: { phone: "Auto: 833-511-7625 | Home: 844-346-1225" },
+    claims: { phone: "833-511-7625" },
     changeRequest: "Auto: policychanges@plymouthrock.com | Home: homeprocessing@plymouthrock.com",
     hours: "M–F 8am–5pm EST"
   },
@@ -523,7 +523,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "877-222-4586", email: "underwriting@thegeneral.com" },
     uw: { email: "underwriting@thegeneral.com" },
-    claims: { phone: "877-222-4586" },
+    claims: { phone: "800-280-1466" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–7pm CST, Sat 8am–4pm CST"
   },
@@ -549,7 +549,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-598-8422", chat: true, note: "Fax: 800-556-8625" },
     uw: { name: "Daniel Backes", phone: "315-734-2071", email: "daniel.backes@uticanational.com", note: "General UW: webpld@uticanational.com" },
-    claims: {phone: "800-456-4556"},
+    claims: {phone: "800-598-8422"},
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
   },
