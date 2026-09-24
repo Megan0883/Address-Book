@@ -296,7 +296,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { email: "agents@lemonade.com", chat: true, note: "Chat preferred" },
     uw: {},
-    claims: { note: "Direct customer to mobile app" },
+    claims: { phone: "844-733-8666", note: "Or direct customer to mobile app" },
     changeRequest: "Customers can process changes in app. Agents can process some changes in carrier site.",
     hours: "7 days/week 8am–8pm ET"
   },
