@@ -73,6 +73,7 @@ const LOGO_MAP = {
   'PURE':                                   'pure.png',
   'Vermont Mutual':                         'real vermont.png',
   'Liberty Mutual (Safeco)':               'safeco (2).png',
+  'S-H Underwriters':                       'sh-underwriters.png',
   'Slide':                                  'slide.png',
   'Travelers':                              'travelers.png',
   'Utica National':                         'utica.png',
