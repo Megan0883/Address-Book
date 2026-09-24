@@ -15,7 +15,7 @@ function avatarColor(name) {
 }
 
 function initials(name) {
-  return name.split(/\s+/).map(w => w[0] || '').join('').substring(0, 2).toUpperCase();
+  return name.split(/\s+/).filter(w => /^[a-z]/i.test(w)).map(w => w[0]).join('').substring(0, 2).toUpperCase();
 }
 
 const LOGO_MAP = {
@@ -346,25 +346,98 @@ function carrierMatchesQuery(c, q) {
 
 // ===== AGENTS =====
 
-function renderAgents(list, gridId) {
-  const grid = document.getElementById(gridId || 'agentGrid');
-  if (!grid) return;
-  grid.innerHTML = list.map(a => {
-    const [bg, fg] = avatarColor(a.name);
-    return `
-      <div class="agent-card">
-        <div class="agent-avatar" style="background:${bg};color:${fg}">${initials(a.name)}</div>
-        <div>
-          <div class="agent-name">${escHtml(a.name)}</div>
-          ${a.agency ? `<div class="agent-agency">${escHtml(a.agency)}</div>` : '<div class="agent-agency">&nbsp;</div>'}
-          <div class="agent-detail">
-            ${a.phone ? `<span>📞 ${escHtml(a.phone)}</span><br>` : ''}
-            ${a.email ? `<span>✉️ <a href="mailto:${escHtml(a.email)}">${escHtml(a.email)}</a></span>` : ''}
-          </div>
-        </div>
+const BRANCH_MAIN = '833-327-2624';
+
+function agentCard(a, extOnly) {
+  const [bg, fg] = avatarColor(a.name);
+  const ext = extOnly && a.phone && a.phone.startsWith(BRANCH_MAIN) ? a.phone.slice(BRANCH_MAIN.length).trim() : '';
+  const phoneHtml = ext
+    ? `<div class="agent-ext">${escHtml(ext)}</div>`
+    : (a.phone ? `<div class="contact-line">${PHONE_ICON}<span class="nowrap">${escHtml(a.phone)}</span></div>` : '');
+  return `
+    <div class="agent-card">
+      <div class="agent-avatar" style="background:${bg};color:${fg}">${initials(a.name)}</div>
+      <div class="agent-info">
+        <div class="agent-name">${escHtml(a.name)}</div>
+        ${a.agency && !extOnly ? `<div class="agent-agency">${escHtml(a.agency)}</div>` : ''}
+        ${phoneHtml}
+        ${a.email ? `<div class="contact-line">${MAIL_ICON}<a href="mailto:${escHtml(a.email)}">${escHtml(a.email).replace('@', '<wbr>@')}</a></div>` : ''}
       </div>
-    `;
-  }).join('');
+    </div>`;
+}
+
+// Flat list (used by global search)
+function renderAgents(list, gridId) {
+  const grid = document.getElementById(gridId);
+  if (grid) grid.innerHTML = list.map(a => agentCard(a, false)).join('');
+}
+
+// Grouped Franchise Agents tab
+function renderAgentGroups() {
+  const wrap = document.getElementById('agentGroups');
+  if (!wrap) return;
+  const byName = (x, y) => x.name.localeCompare(y.name);
+  const branch = window.AGENTS.filter(a => a.agency === 'Branch').sort(byName);
+  const indep = window.AGENTS.filter(a => a.agency && a.agency !== 'Branch').sort((x, y) => x.agency.localeCompare(y.agency) || byName(x, y));
+  const none = window.AGENTS.filter(a => !a.agency).sort(byName);
+  const group = (title, sub, list, extOnly) => list.length ? `
+    <div class="internal-group">
+      <h3 class="group-heading">${title}</h3>
+      ${sub ? `<p class="group-sub">${sub}</p>` : ''}
+      <div class="agent-grid">${list.map(a => agentCard(a, extOnly)).join('')}</div>
+    </div>` : '';
+  wrap.innerHTML =
+    group(`Branch <span class="group-count">${branch.length}</span>`, `${PHONE_ICON}<span>Call <strong class="nowrap">${BRANCH_MAIN}</strong>, then dial the agent's extension</span>`, branch, true) +
+    group(`Independent Agencies <span class="group-count">${indep.length}</span>`, '', indep, false) +
+    group(`Agency Not Listed <span class="group-count">${none.length}</span>`, '', none, false);
+}
+
+// ===== INTERNAL CONTACTS =====
+
+const MAIL_ICON = svgIcon('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>');
+const FAX_ICON  = svgIcon('<path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/>');
+const PIN_ICON  = svgIcon('<path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>');
+
+function contactLines(it) {
+  const lines = [];
+  if (it.phone) it.phone.split('|').forEach(p => lines.push([PHONE_ICON, escHtml(p.trim()).replace(/(\d[\d-]{6,}\d)/g, '<span class="nowrap">$1</span>')]));
+  if (it.email) lines.push([MAIL_ICON, `<a href="mailto:${escHtml(it.email)}" onclick="event.stopPropagation()">${escHtml(it.email)}</a>`]);
+  if (it.fax) lines.push([FAX_ICON, escHtml(it.fax)]);
+  if (it.address) lines.push([PIN_ICON, escHtml(it.address)]);
+  return lines.map(([icon, val]) => `<div class="contact-line">${icon}<span>${val}</span></div>`).join('');
+}
+
+function contactCard(it) {
+  return `
+    <div class="contact-card">
+      <div class="contact-label">${escHtml(it.label || it.name)}</div>
+      ${contactLines(it)}
+      ${it.note ? `<div class="contact-note">${escHtml(it.note)}</div>` : ''}
+      ${it.hours ? `<span class="hours-tag">${escHtml(it.hours)}</span>` : ''}
+    </div>`;
+}
+
+function allInternalContacts() {
+  return window.INTERNAL.flatMap(g => [...g.items, ...(g.people || [])]);
+}
+
+function renderInternal() {
+  const quick = document.getElementById('internalQuick');
+  const groups = document.getElementById('internalGroups');
+  if (!quick || !groups) return;
+  quick.innerHTML = allInternalContacts().filter(it => it.quick).map(it => `
+    <div class="quick-tile">
+      <div class="quick-label">${escHtml(it.label)}</div>
+      <div class="quick-value">${it.phone ? escHtml(it.phone) : `<a href="mailto:${escHtml(it.email)}">${escHtml(it.email)}</a>`}</div>
+      ${it.hours ? `<span class="hours-tag">${escHtml(it.hours)}</span>` : ''}
+    </div>`).join('');
+  groups.innerHTML = window.INTERNAL.map(g => `
+    <div class="internal-group">
+      <h3 class="group-heading">${escHtml(g.title)}</h3>
+      <div class="internal-grid">${g.items.map(contactCard).join('')}</div>
+      ${g.people ? `<div class="internal-grid people">${g.people.map(contactCard).join('')}</div>` : ''}
+      ${g.footnote ? `<p class="group-footnote">${escHtml(g.footnote)}</p>` : ''}
+    </div>`).join('');
 }
 
 // ===== GLOBAL SEARCH =====
@@ -398,16 +471,13 @@ function globalSearch(q) {
   }
 
   // --- Internal ---
-  const allRows = document.querySelectorAll('#tab-internal .info-row');
-  const matchedRows = [];
-  allRows.forEach(r => {
-    if (r.textContent.toLowerCase().includes(q)) matchedRows.push(r);
-  });
+  const matchedInternal = allInternalContacts().filter(it =>
+    [it.label, it.name, it.phone, it.email, it.fax, it.address, it.note, it.hours].join(' ').toLowerCase().includes(q)
+  );
   const internalWrap = document.getElementById('searchInternalWrap');
-  const internalResults = document.getElementById('searchInternalResults');
-  if (matchedRows.length > 0) {
+  if (matchedInternal.length > 0) {
     internalWrap.style.display = 'block';
-    internalResults.innerHTML = matchedRows.map(r => r.outerHTML).join('');
+    document.getElementById('searchInternalResults').innerHTML = matchedInternal.map(contactCard).join('');
   } else {
     internalWrap.style.display = 'none';
   }
@@ -425,7 +495,7 @@ function globalSearch(q) {
   }
 
   // --- Count & no results ---
-  const total = matchedCarriers.length + matchedRows.length + matchedAgents.length;
+  const total = matchedCarriers.length + matchedInternal.length + matchedAgents.length;
   document.getElementById('globalCount').textContent =
     total + ' result' + (total === 1 ? '' : 's') + ' for "' + q + '"';
   document.getElementById('globalNoResults').style.display = total === 0 ? 'block' : 'none';
@@ -453,5 +523,6 @@ document.getElementById('mainNav').addEventListener('click', e => {
 
 // ===== INIT =====
 renderCarrierCards(window.CARRIERS);
-renderAgents(window.AGENTS, 'agentGrid');
+renderAgentGroups();
+renderInternal();
 

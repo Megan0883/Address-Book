@@ -558,25 +558,78 @@ main {
 }
 .info-val { font-size: 13px; color: var(--gray-800); line-height: 1.5; }
 
+/* ===== INTERNAL CONTACTS ===== */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.quick-tile {
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.quick-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.85; }
+.quick-value { font-size: 18px; font-weight: 700; word-break: break-word; }
+.quick-value a { color: var(--white); }
+.quick-tile .hours-tag { background: rgba(255,255,255,0.18); color: var(--white); align-self: flex-start; }
+.internal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: 14px;
+}
+.internal-grid.people { margin-top: 14px; }
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--accent-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.contact-label { font-size: 15px; font-weight: 700; color: var(--navy); }
+.contact-line { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; font-weight: 600; color: var(--navy); word-break: break-word; }
+.contact-line .card-row-icon { width: 16px; height: 16px; }
+.contact-note { font-size: 13px; color: var(--gray-600); line-height: 1.4; }
+.hours-tag {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-size: 12px;
+  font-weight: 600;
+}
+.nowrap { white-space: nowrap; }
+.group-footnote { margin-top: 10px; font-size: 13px; color: var(--gray-600); }
+
 /* ===== AGENT GRID ===== */
 .agent-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: 14px;
 }
 .agent-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  padding: 14px 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: 14px;
+  padding: 16px 18px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  min-width: 0;
 }
 .agent-avatar {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -585,10 +638,15 @@ main {
   font-weight: 700;
   flex-shrink: 0;
 }
-.agent-name { font-size: 14px; font-weight: 600; color: var(--navy); }
-.agent-agency { font-size: 12px; color: var(--gray-400); margin-bottom: 6px; }
-.agent-detail { font-size: 12px; color: var(--gray-600); line-height: 1.6; }
-.agent-detail a { color: var(--blue); }
+.agent-info { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.agent-name { font-size: 15px; font-weight: 700; color: var(--navy); }
+.agent-agency { font-size: 13px; color: var(--gray-600); }
+.agent-ext { font-size: 20px; font-weight: 700; color: var(--accent); line-height: 1.2; }
+.agent-info .contact-line { font-size: 13px; }
+.agent-info .contact-line a { font-weight: 500; overflow-wrap: anywhere; }
+.group-sub { display: flex; align-items: center; gap: 8px; margin: -2px 0 14px; font-size: 14px; color: var(--gray-600); }
+.group-sub strong { color: var(--navy); }
+.group-count { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; background: var(--gray-100); color: var(--gray-600); font-size: 11px; letter-spacing: 0; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {

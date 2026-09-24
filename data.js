@@ -547,7 +547,7 @@ window.CARRIERS = [
 ];
 
 window.AGENTS = [
-  { name: "Ailyn Ravelo", agency: "", email: "aravelo@pollyagent.com", phone: "786-384-3949" },
+  { name: "Ailyn Ravelo", agency: "South Florida Assurance LLC", email: "aravelo@pollyagent.com", phone: "786-384-3949" },
   { name: "Alexandria Dellafera", agency: "Branch", email: "Alexandria.Dellafera@pollyagent.com", phone: "833-327-2624 x1187" },
   { name: "Alexia Jeffries", agency: "Branch", email: "alexia.jeffries@pollyagent.com", phone: "833-327-2624 x3017" },
   { name: "Agustin Maldonado", agency: "Branch", email: "auggie.maldonado@pollyagent.com", phone: "833-327-2624 x3013" },
@@ -563,16 +563,77 @@ window.AGENTS = [
   { name: "Jeff Dion", agency: "Vermont Trusted Insurance", email: "jeff.dion@pollyagent.com", phone: "802-662-0622" },
   { name: "Jyldyz Jakypova", agency: "Star Insurance Group", email: "jyldyz.jakypova@pollyagent.com", phone: "215-960-1310" },
   { name: "Kimberly Saldana", agency: "Branch", email: "kimberly.saldana@pollyagent.com", phone: "833-327-2624 x3008" },
-  { name: "Kristi Wilson", agency: "Branch", email: "kristi.wilson@pollyagent.com", phone: "" },
   { name: "Mariah Azzouni", agency: "Branch", email: "Mariah.Azzouni@pollyagent.com", phone: "833-327-2624 x1061" },
   { name: "Mark Vesosky", agency: "MAV Insurance", email: "mark.vesosky@pollyagent.com", phone: "802-734-9197" },
   { name: "Megan Shay", agency: "Branch", email: "megan.shay@pollyagent.com", phone: "833-327-2624 x3011" },
   { name: "Michelle Moss", agency: "Branch", email: "michelle.moss@pollyagent.com", phone: "833-327-2624 x3020" },
-  { name: "Mike Trimboli", agency: "", email: "mike.trimboli@pollyagent.com", phone: "203-585-3138" },
+  { name: "Mike Trimboli", agency: "Trimboli Insurance Agency", email: "mike.trimboli@pollyagent.com", phone: "203-585-3138" },
   { name: "Sarah Christly", agency: "Branch", email: "sarah.christly@pollyagent.com", phone: "833-327-2624 x3021" },
   { name: "Sierra Faulk", agency: "Branch", email: "sierra.faulk@pollyagent.com", phone: "833-327-2624 x3026" },
   { name: "Shameka Bolden", agency: "Branch", email: "shameka.bolden@pollyagent.com", phone: "833-327-2624 x3019"},
   { name: "Teri Barrow", agency: "Branch", email: "teri.barrow@pollyagent.com", phone: "833-327-2624 x1132" },
   { name: "Tristan (Tripp) Holm", agency: "Branch", email: "tripp.holm@pollyagent.com", phone: "833-327-2624 x3009" },
   { name: "Vanna Mosley", agency: "Branch", email: "Vanna.Mosley@pollyagent.com", phone: "833-327-2624 x1160" }
+];
+
+// ============================================================
+// POLLY INTERNAL CONTACTS
+// Fields: label, phone, email, fax, address, note, hours
+// quick: true  → also shows in the Quick Dial row at the top
+// people:      → name + phone cards shown under a group
+// ============================================================
+
+window.INTERNAL = [
+  {
+    title: "Polly Hours & Main Lines",
+    items: [
+      { label: "Main Phone", phone: "802-655-9000", quick: true },
+      { label: "Service Center", phone: "855-951-6188", hours: "M–F 8am–6pm EST", quick: true },
+      { label: "Sales (Non-TruStage)", phone: "855-330-6155", hours: "M–F 9am–8pm EST", quick: true },
+      { label: "Sales (TruStage)", phone: "855-962-8989", hours: "M–F 9am–8pm EST", quick: true },
+      { label: "Customer Service Email", email: "customerservice@polly.co", note: "Personal lines service requests (customers)", quick: true },
+      { label: "Carrier Care Email", email: "customercare@polly.co", note: "Personal lines service requests (carriers)" },
+      { label: "Commercial & Front Desk", phone: "802-655-9000", hours: "M–F 9am–5pm EST" },
+      { label: "BN / Fishkill NY", phone: "845-896-4700", hours: "M–F 8:30am–5pm EST" },
+      { label: "Address", address: "2300 St George Rd, Williston, VT 05495" },
+      { label: "Fax (General)", fax: "802-871-5609" },
+      { label: "Fax (RTA Forms)", fax: "917-695-2696", note: "Fax RTA forms to get stamped" }
+    ]
+  },
+  {
+    title: "Dealer Success",
+    items: [
+      { label: "General #", phone: "855-344-9033 Option 3", email: "clientsuccess@polly.co", hours: "M–F 9am–6pm EST", quick: true },
+      { label: "Book a Demo", email: "dealership@polly.co", note: "For dealerships interested in partnering" }
+    ],
+    people: [
+      { name: "Maryellen Florentino", phone: "855-974-3622" },
+      { name: "Michelle Walker", phone: "855-974-7428" },
+      { name: "Tyson Clark", phone: "855-974-9337" },
+      { name: "Zach Scogna", phone: "855-974-2267" }
+    ],
+    footnote: "Not listed? Transfer to the general # and select option 3."
+  },
+  {
+    title: "Agent / Team Contacts",
+    items: [
+      { label: "Attendance Line", phone: "802-552-3552", note: "Agent call outs (manager VM)" },
+      { label: "BN (Fishkill NY)", phone: "845-896-4700", email: "info@polly.co", note: "Forward misrouted emails to info@polly.co" },
+      { label: "Call Center Managers", email: "callcentermanagers@polly.co", note: "Escalations & manager attention" },
+      { label: "Call Center Operations", email: "callcenteroperations@polly.co", note: "Carrier appointments, credentials, licensing" },
+      { label: "Commercial (COI)", email: "certificate@polly.co", note: "Customers requesting certificates of insurance" },
+      { label: "Commercial Lines New Biz", note: "Commercial Referral Form — for commercial quote requests" },
+      { label: "Commercial Service", email: "CLInbox@polly.co", note: "Forward misrouted emails or requests" },
+      { label: "Commissions", email: "commissions@polly.co", note: "Commission questions" },
+      { label: "Customer Do Not Call", email: "customersuccess@polly.co", note: "Include customer name & phone #" },
+      { label: "Finance / Payroll", email: "payroll@polly.co", note: "Paycheck questions" },
+      { label: "Accounting", email: "accounting@polly.co", note: "Carrier statements & inquiries" },
+      { label: "HR", email: "hr@polly.co", note: "HR questions" },
+      { label: "Insurance Help", note: "Slack: #Insurance-Help — SME ticket requests" },
+      { label: "Office Manager", email: "officemanager@polly.co", note: "Request docs to be mailed" },
+      { label: "TruStage Misdirected Calls", phone: "855-591-9025", note: "Transfer TruStage customers not seeking auto/home" },
+      { label: "TruStage Life Policy Svc", phone: "Warm Transfer: 833-492-1489 | Customer Direct: 888-787-8243" },
+      { label: "GEICO Transfer (DCO)", phone: "855-568-6925", note: "Customers with GEICO quote via Fastpass/Polly platform" }
+    ]
+  }
 ];
