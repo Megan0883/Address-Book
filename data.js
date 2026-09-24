@@ -22,6 +22,15 @@ window.CARRIERS = [
     hours: "M–F 9am–7pm EST, Sat 10am–2pm EST"
   },
   {
+    name: "American Collectors",
+    serviceCenter: null,
+    agentSupport: {},
+    uw: {},
+    claims: { phone: "866-986-9407" },
+    changeRequest: "",
+    hours: ""
+  },
+  {
     name: "American Integrity",
     serviceCenter: null,
     agentSupport: { phone: "866-968-8390" },
@@ -71,7 +80,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "855-438-5411", email: "agencysupport@ourbranch.com", chat: true, note: "Chat preferred" },
     uw: {},
-    claims: { note: "Direct customer to mobile app or file online" },
+    claims: { phone: "855-540-9642", note: "Or direct customer to mobile app / file online" },
     changeRequest: "Must endorse in carrier site or call/chat Agent Support",
     hours: "M–F 9am–7pm ET"
   },
@@ -89,7 +98,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-777-2131", email: "customercenter@chubb.com" },
     uw: { phone: "908-572-3837", email: "UWSupport@chubb.com" },
-    claims: { phone: "800-777-2131" },
+    claims: { phone: "800-252-4670" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–8pm EST"
   },
@@ -125,7 +134,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-852-3380" },
     uw: { name: "Reba Mistretta", phone: "800-852-3380 x6296", email: "rmistretta@concordgroupins.com" },
-    claims: { phone: "ME: 800-482-7443 | MA: 800-422-5246 | NH: 800-888-6050 | VT: 800-660-3838" },
+    claims: { phone: "800-888-6050" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
   },
@@ -134,7 +143,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "877-367-6572", email: "billing@countryway.com", note: "Billing email" },
     uw: { email: "KY: Patrick Izac 315-634-5275 pizac@countryway.com | ME: Dennis Jeter 315-634-5288 djeter@countryway.com | NY: Joni Murphy 315-634-5264 jmurphy@countryway.com | PA: Justin Dorr 315-634-5257 jdorr@countryway.com | New biz quotes: quotes@countryway.com" },
-    claims: { phone: "Report: 888-223-3649 | Claims Dept: 800-828-6862" },
+    claims: { phone: "800-828-6862" },
     changeRequest: "Cancellations must be processed by Countryway — send signed LPR to underwriting@countryway.com",
     hours: "M–F 8am–4:30pm EST"
   },
@@ -161,7 +170,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-255-0332 opt. 3\n866-539-1315 (MA)", chat: true },
     uw: { email: "policyupdate@foremost.com"},
-    claims: { phone: "800-854-6011" },
+    claims: { phone: "800-527-3907" },
     changeRequest: "policyupdate@foremost.com \n EFT: upload to Agent360 or email/fax 866-743-4891. \n RCC forms: mail or fax 866-421-0076.",
     hours: "M–F 8am–8pm EST"
   },
@@ -170,7 +179,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-527-3905", chat: true, note: "Chat Now preferred" },
     uw: { email: "sduw@foremost.com (specialty dwelling) \n pluw@foremost.com (Mobile Home) \n rvuw@foremost.com \n imaging@foremost.com"},
-    claims: { phone: "800-435-7764" },
+    claims: { phone: "800-527-3907" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–8pm EST"
   },
@@ -179,7 +188,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "866-424-6726" },
     uw: {},
-    claims: { phone: "800-424-6726" },
+    claims: { phone: "866-424-6726" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–6pm CST"
   },
@@ -188,7 +197,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "706-863-3777", email: "agentsupport@geovera.com" },
     uw: {},
-    claims: {},
+    claims: { phone: "800-735-8086" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M-F 9am-8pm EST",
   },
@@ -287,7 +296,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { email: "agents@lemonade.com", chat: true, note: "Chat preferred" },
     uw: {},
-    claims: { note: "Direct customer to mobile app" },
+    claims: { phone: "844-733-8666", note: "Or direct customer to mobile app" },
     changeRequest: "Customers can process changes in app. Agents can process some changes in carrier site.",
     hours: "7 days/week 8am–8pm ET"
   },
@@ -400,15 +409,6 @@ window.CARRIERS = [
     hours: "M–F 9am–8pm EST"
   },
   {
-    name: "Patriot",
-    serviceCenter: null,
-    agentSupport: { phone: "866-460-1776", email: "pl.email@fmins.com" },
-    uw: {},
-    claims: { phone: "866-460-1776" },
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "Personal Umbrella",
     serviceCenter: null,
     agentSupport: { phone: "800-564-1799", note: "Tech Support: opt. 7 | FL quotes: Mary Nyquist x3311 mnyquist@mymga.com" },
@@ -422,7 +422,7 @@ window.CARRIERS = [
     serviceCenter: { phone: "800-437-5556", note: "NJ & PA ONLY" },
     agentSupport: { phone: "Auto/Umbrella: 833-511-7625 | Home: 844-208-1935", note: "908-790-7800 opt. 5 | Home: Nick Bartlett 617-428-1945 nbartlett@plymouthrock.com", chat: true },
     uw: { phone: "908-790-7800 Opt 5" },
-    claims: { phone: "Auto: 833-511-7625 | Home: 844-346-1225" },
+    claims: { phone: "833-511-7625" },
     changeRequest: "Auto: policychanges@plymouthrock.com | Home: homeprocessing@plymouthrock.com",
     hours: "M–F 8am–5pm EST"
   },
@@ -447,15 +447,6 @@ window.CARRIERS = [
   },
 
   {
-    name: "Providence Mutual",
-    serviceCenter: null,
-    agentSupport: { phone: "877-763-1800", email: "UWFAX@providencemutual.com" },
-    uw: { email: "UWFAX@providencemutual.com" },
-    claims: {},
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "PURE",
     serviceCenter: null,
     agentSupport: { phone: "888-813-7873", email: "quote@pureinsurance.com", note: "New biz: Fatou Secka fsecka@pureinsurance.com | Existing: underwritingservices@pureinsurance.com" },
@@ -474,15 +465,6 @@ window.CARRIERS = [
     hours: ""
   },
   {
-    name: "Selective",
-    serviceCenter: { phone: "866-513-4395", hours: "See agent support hours" },
-    agentSupport: { phone: "866-861-3239", email: "clientservicecenter@selective.com" },
-    uw: {},
-    claims: { phone: "866-455-9969" },
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "Slide",
     serviceCenter: { phone: "800-748-2030", hours: "M–F 8am–5pm EST" },
     agentSupport: { phone: "800-598-8422", email: "policyservices@slideinsurance.com" },
@@ -490,15 +472,6 @@ window.CARRIERS = [
     claims: { phone: "866-230-3758", email: "claims@slideinsurance.com" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
-  },
-  {
-    name: "StateAuto",
-    serviceCenter: null,
-    agentSupport: { phone: "833-724-3577", email: "PLUnderwriting@stateauto.com" },
-    uw: { email: "PLUnderwriting@stateauto.com" },
-    claims: { phone: "877-722-5246" },
-    changeRequest: "Email SAservice@stateauto.com",
-    hours: ""
   },
   {
     name: "Stillwater",
@@ -514,7 +487,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "877-222-4586", email: "underwriting@thegeneral.com" },
     uw: { email: "underwriting@thegeneral.com" },
-    claims: { phone: "877-222-4586" },
+    claims: { phone: "800-280-1466" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–7pm CST, Sat 8am–4pm CST"
   },
@@ -540,7 +513,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-598-8422", chat: true, note: "Fax: 800-556-8625" },
     uw: { name: "Daniel Backes", phone: "315-734-2071", email: "daniel.backes@uticanational.com", note: "General UW: webpld@uticanational.com" },
-    claims: {phone: "800-456-4556"},
+    claims: {phone: "800-598-8422"},
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
   },
