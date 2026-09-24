@@ -32,6 +32,7 @@ const LOGO_MAP = {
   'Bristol West (Billing Only)':            'bw.png',
   'Cincinnati':                             'cincinnati.png',
   'Citizens (FL)':                          'citizens.png',
+  'Colonial Group (Surplus Lines)':         'colonial-group.png',
   'Concord':                                'concord.png',
   'Dairyland':                              'dairyland.png',
   'Countryway':                             'country.png',
