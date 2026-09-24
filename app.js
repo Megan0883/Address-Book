@@ -21,6 +21,7 @@ function initials(name) {
 const LOGO_MAP = {
   'AAA':                                    'aaa new.png',
   'Allstate':                               'allstate.png',
+  'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
   'Arbella':                                'arbella logo.png',
   'Branch':                                 'branch.png',
