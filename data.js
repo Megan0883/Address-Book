@@ -409,15 +409,6 @@ window.CARRIERS = [
     hours: "M–F 9am–8pm EST"
   },
   {
-    name: "Patriot",
-    serviceCenter: null,
-    agentSupport: { phone: "866-460-1776", email: "pl.email@fmins.com" },
-    uw: {},
-    claims: { phone: "866-460-1776" },
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "Personal Umbrella",
     serviceCenter: null,
     agentSupport: { phone: "800-564-1799", note: "Tech Support: opt. 7 | FL quotes: Mary Nyquist x3311 mnyquist@mymga.com" },
@@ -456,15 +447,6 @@ window.CARRIERS = [
   },
 
   {
-    name: "Providence Mutual",
-    serviceCenter: null,
-    agentSupport: { phone: "877-763-1800", email: "UWFAX@providencemutual.com" },
-    uw: { email: "UWFAX@providencemutual.com" },
-    claims: {},
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "PURE",
     serviceCenter: null,
     agentSupport: { phone: "888-813-7873", email: "quote@pureinsurance.com", note: "New biz: Fatou Secka fsecka@pureinsurance.com | Existing: underwritingservices@pureinsurance.com" },
@@ -483,15 +465,6 @@ window.CARRIERS = [
     hours: ""
   },
   {
-    name: "Selective",
-    serviceCenter: { phone: "866-513-4395", hours: "See agent support hours" },
-    agentSupport: { phone: "866-861-3239", email: "clientservicecenter@selective.com" },
-    uw: {},
-    claims: { phone: "866-455-9969" },
-    changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: ""
-  },
-  {
     name: "Slide",
     serviceCenter: { phone: "800-748-2030", hours: "M–F 8am–5pm EST" },
     agentSupport: { phone: "800-598-8422", email: "policyservices@slideinsurance.com" },
@@ -499,15 +472,6 @@ window.CARRIERS = [
     claims: { phone: "866-230-3758", email: "claims@slideinsurance.com" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–5pm EST"
-  },
-  {
-    name: "StateAuto",
-    serviceCenter: null,
-    agentSupport: { phone: "833-724-3577", email: "PLUnderwriting@stateauto.com" },
-    uw: { email: "PLUnderwriting@stateauto.com" },
-    claims: { phone: "877-722-5246" },
-    changeRequest: "Email SAservice@stateauto.com",
-    hours: ""
   },
   {
     name: "Stillwater",
