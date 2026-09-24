@@ -65,6 +65,7 @@ const LOGO_MAP = {
   'Ohio Mutual':                            'omig.png',
   'Openly':                                 'openly.png',
   'Orchid':                                 'orchid.png',
+  'Personal Umbrella':                      'personal-umbrella.png',
   'Plymouth Rock':                          'plymouth.png',
   'Progressive':                            'progress.png',
   'ASI / Progressive Home':                 'progress.png',
