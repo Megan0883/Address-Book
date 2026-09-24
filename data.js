@@ -197,7 +197,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "706-863-3777", email: "agentsupport@geovera.com" },
     uw: {},
-    claims: {},
+    claims: { phone: "800-735-8086" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M-F 9am-8pm EST",
   },
