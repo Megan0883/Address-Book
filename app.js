@@ -45,6 +45,7 @@ const LOGO_MAP = {
   'Good2Go':                                'good2go.png',
   'Grange':                                 'grange.png',
   'Hagerty':                                'hagerty.png',
+  'Hanover':                                'hanover.png',
   'Hartford':                               'the hartford.png',
   'Johnson & Johnson':                      'johnson.png',
   'Kemper':                                 'kemepr.png',
