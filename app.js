@@ -58,6 +58,7 @@ const LOGO_MAP = {
   'Mapfre / Commerce':                      'mapfre logo.png',
   'Mercury':                                'mercury.png',
   'Maine Mutual Group (MMG)':               'mmg.png',
+  'National General':                       'national-general.png',
   'Nationwide':                             'nationwide.png',
   'New England Excess Exchange':            'neee.png',
   'NYCM':                                   'nycm.png',
