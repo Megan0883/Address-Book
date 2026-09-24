@@ -33,6 +33,7 @@ const LOGO_MAP = {
   'Cincinnati':                             'cincinnati.png',
   'Citizens (FL)':                          'citizens.png',
   'Concord':                                'concord.png',
+  'Dairyland':                              'dairyland.png',
   'Countryway':                             'country.png',
   'Foremost Signature':                     'foremost.png',
   'Foremost STAR':                          'foremost.png',
