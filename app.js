@@ -19,13 +19,13 @@ function initials(name) {
 }
 
 const LOGO_MAP = {
-  'AAA':                                    'aaa new.png',
+  'AAA':                                    'aaa.png',
   'Allstate':                               'allstate.png',
   'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
   'American Modern':                        'american-modern.jpg',
   'Annex Risk':                             'annex-risk.png',
-  'Arbella':                                'arbella logo.png',
+  'Arbella':                                'arbella.png',
   'Branch':                                 'branch.png',
   'Chubb':                                  'chubb.webp',
   'Bristol West':                           'bw.png',
@@ -38,7 +38,7 @@ const LOGO_MAP = {
   'Encompass':                              'encompass.png',
   'Countryway':                             'country.png',
   'Foremost Signature':                     'foremost.png',
-  'Foremost STAR':                          'foremost.png',
+  'Foremost STAR':                          'foremost-star.png',
   'Gainsco':                                'gainsco.png',
   'GeoVera':                                'geovera.png',
   'The General':                            'general.png',
