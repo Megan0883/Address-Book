@@ -23,6 +23,7 @@ const LOGO_MAP = {
   'Allstate':                               'allstate.png',
   'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
+  'American Modern':                        'american-modern.jpg',
   'Arbella':                                'arbella logo.png',
   'Branch':                                 'branch.png',
   'Bristol West':                           'bw.png',
