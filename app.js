@@ -35,6 +35,7 @@ const LOGO_MAP = {
   'Colonial Group (Surplus Lines)':         'colonial-group.png',
   'Concord':                                'concord.png',
   'Dairyland':                              'dairyland.png',
+  'Encompass':                              'encompass.png',
   'Countryway':                             'country.png',
   'Foremost Signature':                     'foremost.png',
   'Foremost STAR':                          'foremost.png',
