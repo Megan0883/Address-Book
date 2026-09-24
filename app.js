@@ -20,42 +20,65 @@ function initials(name) {
 
 const LOGO_MAP = {
   'AAA':                                    'aaa new.png',
+  'Allstate':                               'allstate.png',
+  'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
+  'American Modern':                        'american-modern.jpg',
+  'Annex Risk':                             'annex-risk.png',
   'Arbella':                                'arbella logo.png',
   'Branch':                                 'branch.png',
+  'Chubb':                                  'chubb.webp',
   'Bristol West':                           'bw.png',
   'Bristol West (Billing Only)':            'bw.png',
   'Cincinnati':                             'cincinnati.png',
+  'Citizens (FL)':                          'citizens.png',
+  'Colonial Group (Surplus Lines)':         'colonial-group.png',
   'Concord':                                'concord.png',
+  'Dairyland':                              'dairyland.png',
+  'Encompass':                              'encompass.png',
   'Countryway':                             'country.png',
   'Foremost Signature':                     'foremost.png',
   'Foremost STAR':                          'foremost.png',
   'Gainsco':                                'gainsco.png',
+  'GeoVera':                                'geovera.png',
   'The General':                            'general.png',
   'Good2Go':                                'good2go.png',
   'Grange':                                 'grange.png',
+  'Hagerty':                                'hagerty.png',
+  'Hanover':                                'hanover.png',
   'Hartford':                               'the hartford.png',
+  'Heritage':                               'heritage.png',
   'Johnson & Johnson':                      'johnson.png',
   'Kemper':                                 'kemepr.png',
   'Kemper Infinity':                        'kemepr.png',
-  'Kemper Preferred':                       'kemepr.png',
+  'Kemper Preferred (Old Kemper)':          'kemepr.png',
   'Lemonade':                               'lemonade.png',
   'Loggerhead':                             'loggerhead.png',
+  'Main Street America (MSA)':              'msa.png',
   'Mapfre / Commerce':                      'mapfre logo.png',
   'Mercury':                                'mercury.png',
-  'Maine Mutual Group':                     'mmg.png',
+  'Maine Mutual Group (MMG)':               'mmg.png',
+  'National General':                       'national-general.png',
   'Nationwide':                             'nationwide.png',
   'New England Excess Exchange':            'neee.png',
   'NYCM':                                   'nycm.png',
   'Ohio Mutual':                            'omig.png',
   'Openly':                                 'openly.png',
+  'Orchid':                                 'orchid.png',
+  'Personal Umbrella':                      'personal-umbrella.png',
   'Plymouth Rock':                          'plymouth.png',
+  'Preferred Mutual':                       'preferred-mutual.png',
   'Progressive':                            'progress.png',
+  'ASI / Progressive Home':                 'progress.png',
   'PURE':                                   'pure.png',
   'Vermont Mutual':                         'real vermont.png',
   'Liberty Mutual (Safeco)':               'safeco (2).png',
+  'S-H Underwriters':                       'sh-underwriters.png',
   'Slide':                                  'slide.png',
+  'Steadily':                               'steadily.png',
+  'Stillwater':                             'stillwater.png',
   'Travelers':                              'travelers.png',
+  'Union Mutual':                           'union-mutual.png',
   'Utica National':                         'utica.png',
 };
 
@@ -72,7 +95,7 @@ function avatarHtml(name, forModal) {
     : '';
   const fallbackContent = logoFile ? '' : ini;
   const fallbackStyle = logoFile ? bgStyle : `background:${bg};color:${fg}`;
-  return `<div class="${cls}" style="${logoFile ? bgStyle : fallbackStyle}">${imgTag}${fallbackContent}</div>`;
+  return `<div class="${cls}${logoFile ? ' has-logo' : ''}" style="${logoFile ? bgStyle : fallbackStyle}">${imgTag}${fallbackContent}</div>`;
 }
 
 function escHtml(str) {
@@ -90,6 +113,11 @@ function makeLink(text) {
 }
 
 // ===== CARRIER CARDS =====
+
+const svgIcon = d => `<svg class="card-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const PHONE_ICON = svgIcon('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>');
+const CHAT_ICON = svgIcon('<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>');
+const NOTE_ICON = svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/>');
 
 function buildServiceText(sc) {
   if (!sc) return '';
@@ -138,7 +166,7 @@ function renderCarrierCards(list, gridId) {
           ${avatarHtml(c.name, false)}
           <div class="card-title">
             <div class="card-name">${escHtml(c.name)}</div>
-            ${c.hours ? `<div style="font-size:11px;color:#9aaac8;margin-top:2px">${escHtml(c.hours)}</div>` : ''}
+            ${c.hours ? `<div style="font-size:13px;color:var(--gray-600);margin-top:2px">${escHtml(c.hours)}</div>` : ''}
           </div>
         </div>
 
@@ -152,13 +180,16 @@ function renderCarrierCards(list, gridId) {
         </div>` : ''}
 
         <div class="card-body">
-          ${agentPhone ? `<div class="card-row"><span class="card-row-label">Agent Support</span><span class="card-row-val">${makeLink(agentPhone)}</span></div>` : ''}
-          ${ag.chat ? `<div class="card-row"><span class="card-row-label"></span><span class="card-row-val">${ag.chatUrl ? `<a href="${escHtml(ag.chatUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="info-badge chat-badge">💬 Open chat</a>` : '<span class="info-badge chat-badge">💬 Chat available</span>'}</span></div>` : ''}
-          ${claimsPhone ? `<div class="card-row"><span class="card-row-label">Claims</span><span class="card-row-val">${makeLink(claimsPhone)}</span></div>` : ''}
-          ${c.changeRequest ? `<div class="card-row"><span class="card-row-label">Service Request</span><span class="card-row-val">${makeLink(c.changeRequest)}</span></div>` : ''}
+          ${agentPhone ? `<div class="card-row">${PHONE_ICON}<span class="card-row-label">Agent Support</span><span class="card-row-val">${makeLink(agentPhone)}</span></div>` : ''}
+          ${claimsPhone ? `<div class="card-row">${PHONE_ICON}<span class="card-row-label">Claims</span><span class="card-row-val">${makeLink(claimsPhone)}</span></div>` : ''}
+          ${ag.chat && !ag.chatUrl ? `<div class="card-row note">${CHAT_ICON}<span class="card-row-val">Chat available</span></div>` : ''}
+          ${c.changeRequest ? `<div class="card-row note">${NOTE_ICON}<span class="card-row-val">${makeLink(c.changeRequest)}</span></div>` : ''}
         </div>
 
-        <div class="card-footer">Click for full details →</div>
+        <div class="card-actions">
+          <button type="button" class="btn-pill primary">View Details</button>
+          ${ag.chatUrl ? `<a href="${escHtml(ag.chatUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="btn-pill">Open Chat</a>` : ''}
+        </div>
       </div>
     `;
   }).join('');

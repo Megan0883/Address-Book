@@ -33,7 +33,7 @@ window.CARRIERS = [
   {
     name: "American Integrity",
     serviceCenter: null,
-    agentSupport: { phone: "866-968-8390", chat: true, chatUrl: "https://origin.aii.com/agent-portal/florida" },
+    agentSupport: { phone: "866-968-8390", chat: true, chatUrl: "https://www.aii.com/agent-portal/florida" },
     uw: {},
     claims: { phone: "866-277-9871" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
@@ -154,7 +154,7 @@ window.CARRIERS = [
     uw: { email: "PLPCDocuments@sentry.com" },
     claims: { phone: "800-334-0090" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: "M-F 6am - 9:9m CT"
+    hours: "M–F 6am–9pm CT"
   },
   {
     name: "Encompass",
@@ -561,7 +561,6 @@ window.AGENTS = [
   { name: "Ian Prastien", agency: "LIL Insurance Agency", email: "ian.prastien@pollyagent.com", phone: "845-896-4700" },
   { name: "Jake Hurwitz", agency: "Black Bear Insurance", email: "insuranceblackbear@gmail.com", phone: "781-467-8777" },
   { name: "Jeff Dion", agency: "Vermont Trusted Insurance", email: "jeff.dion@pollyagent.com", phone: "802-662-0622" },
-  { name: "Jennifer Perez", agency: "Branch", email: "jennifer.perez@pollyagent.com", phone: "704-426-0446" },
   { name: "Jyldyz Jakypova", agency: "Star Insurance Group", email: "jyldyz.jakypova@pollyagent.com", phone: "215-960-1310" },
   { name: "Kimberly Saldana", agency: "Branch", email: "kimberly.saldana@pollyagent.com", phone: "833-327-2624 x3008" },
   { name: "Kristi Wilson", agency: "Branch", email: "kristi.wilson@pollyagent.com", phone: "" },
