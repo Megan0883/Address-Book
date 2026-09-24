@@ -27,9 +27,9 @@
   --gray-600: #556080;
   --gray-800: #1e2a44;
   --white: #ffffff;
-  --accent: #4b45f0;
-  --accent-2: #6a5cff;
-  --accent-border: #9c9cf7;
+  --accent: #243b6b;
+  --accent-2: #2f4a80;
+  --accent-border: #c9d3e6;
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --radius: 10px;
   --radius-lg: 14px;
@@ -201,7 +201,7 @@ main {
   overflow: hidden;
 }
 .carrier-card:hover {
-  box-shadow: 0 10px 30px rgba(75,69,240,0.12);
+  box-shadow: 0 10px 30px rgba(36,59,107,0.12);
   border-color: var(--accent);
   transform: translateY(-1px);
 }
