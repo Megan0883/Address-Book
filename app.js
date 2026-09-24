@@ -25,7 +25,7 @@ const LOGO_MAP = {
   'American Integrity':                     'ai.png',
   'American Modern':                        'american-modern.jpg',
   'Annex Risk':                             'annex-risk.png',
-  'Arbella':                                'arbella logo.png',
+  'Arbella':                                'arbella.png',
   'Branch':                                 'branch.png',
   'Chubb':                                  'chubb.webp',
   'Bristol West':                           'bw.png',
