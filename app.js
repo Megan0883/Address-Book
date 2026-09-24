@@ -27,6 +27,7 @@ const LOGO_MAP = {
   'Annex Risk':                             'annex-risk.png',
   'Arbella':                                'arbella logo.png',
   'Branch':                                 'branch.png',
+  'Chubb':                                  'chubb.webp',
   'Bristol West':                           'bw.png',
   'Bristol West (Billing Only)':            'bw.png',
   'Cincinnati':                             'cincinnati.png',
