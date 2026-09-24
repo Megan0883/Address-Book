@@ -170,7 +170,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-255-0332 opt. 3\n866-539-1315 (MA)", chat: true },
     uw: { email: "policyupdate@foremost.com"},
-    claims: { phone: "800-854-6011" },
+    claims: { phone: "800-527-3907" },
     changeRequest: "policyupdate@foremost.com \n EFT: upload to Agent360 or email/fax 866-743-4891. \n RCC forms: mail or fax 866-421-0076.",
     hours: "M–F 8am–8pm EST"
   },
@@ -179,7 +179,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-527-3905", chat: true, note: "Chat Now preferred" },
     uw: { email: "sduw@foremost.com (specialty dwelling) \n pluw@foremost.com (Mobile Home) \n rvuw@foremost.com \n imaging@foremost.com"},
-    claims: { phone: "800-435-7764" },
+    claims: { phone: "800-527-3907" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–8pm EST"
   },
