@@ -98,7 +98,7 @@ window.CARRIERS = [
     serviceCenter: null,
     agentSupport: { phone: "800-777-2131", email: "customercenter@chubb.com" },
     uw: { phone: "908-572-3837", email: "UWSupport@chubb.com" },
-    claims: { phone: "800-682-4822" },
+    claims: { phone: "800-252-4670" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
     hours: "M–F 8am–8pm EST"
   },
