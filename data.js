@@ -474,6 +474,15 @@ window.CARRIERS = [
     hours: "M–F 8am–5pm EST"
   },
   {
+    name: "Steadily",
+    serviceCenter: null,
+    agentSupport: { phone: "855-408-6470", email: "agent-support@steadily.com", chat: true },
+    uw: { phone: "855-408-6470", email: "underwriting@steadily.com" },
+    claims: { phone: "888-966-1611" },
+    changeRequest: "",
+    hours: ""
+  },
+  {
     name: "Stillwater",
     serviceCenter: null,
     agentSupport: { phone: "800-849-6140" },
