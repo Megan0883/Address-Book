@@ -47,6 +47,7 @@ const LOGO_MAP = {
   'Hagerty':                                'hagerty.png',
   'Hanover':                                'hanover.png',
   'Hartford':                               'the hartford.png',
+  'Heritage':                               'heritage.png',
   'Johnson & Johnson':                      'johnson.png',
   'Kemper':                                 'kemepr.png',
   'Kemper Infinity':                        'kemepr.png',
