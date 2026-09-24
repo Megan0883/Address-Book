@@ -19,7 +19,7 @@ function initials(name) {
 }
 
 const LOGO_MAP = {
-  'AAA':                                    'aaa new.png',
+  'AAA':                                    'aaa.png',
   'Allstate':                               'allstate.png',
   'American Collectors':                    'american-collectors.png',
   'American Integrity':                     'ai.png',
