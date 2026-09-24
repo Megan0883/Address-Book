@@ -409,6 +409,15 @@ window.CARRIERS = [
     hours: "M–F 9am–8pm EST"
   },
   {
+    name: "Orchid",
+    serviceCenter: null,
+    agentSupport: { phone: "866-370-6505" },
+    uw: {},
+    claims: { note: "File online: https://orchidinsurance.com/claims/" },
+    changeRequest: "",
+    hours: ""
+  },
+  {
     name: "Personal Umbrella",
     serviceCenter: null,
     agentSupport: { phone: "800-564-1799", note: "Tech Support: opt. 7 | FL quotes: Mary Nyquist x3311 mnyquist@mymga.com" },
