@@ -63,6 +63,7 @@ const LOGO_MAP = {
   'NYCM':                                   'nycm.png',
   'Ohio Mutual':                            'omig.png',
   'Openly':                                 'openly.png',
+  'Orchid':                                 'orchid.png',
   'Plymouth Rock':                          'plymouth.png',
   'Progressive':                            'progress.png',
   'ASI / Progressive Home':                 'progress.png',
