@@ -78,6 +78,7 @@ const LOGO_MAP = {
   'Steadily':                               'steadily.png',
   'Stillwater':                             'stillwater.png',
   'Travelers':                              'travelers.png',
+  'Union Mutual':                           'union-mutual.png',
   'Utica National':                         'utica.png',
 };
 
