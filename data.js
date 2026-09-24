@@ -154,7 +154,7 @@ window.CARRIERS = [
     uw: { email: "PLPCDocuments@sentry.com" },
     claims: { phone: "800-334-0090" },
     changeRequest: "Must endorse in carrier site or contact Agent Support",
-    hours: "M-F 6am - 9:9m CT"
+    hours: "M–F 6am–9pm CT"
   },
   {
     name: "Encompass",
