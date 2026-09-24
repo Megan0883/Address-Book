@@ -54,6 +54,7 @@ const LOGO_MAP = {
   'Kemper Preferred (Old Kemper)':          'kemepr.png',
   'Lemonade':                               'lemonade.png',
   'Loggerhead':                             'loggerhead.png',
+  'Main Street America (MSA)':              'msa.png',
   'Mapfre / Commerce':                      'mapfre logo.png',
   'Mercury':                                'mercury.png',
   'Maine Mutual Group (MMG)':               'mmg.png',
