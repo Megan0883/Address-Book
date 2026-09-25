@@ -108,16 +108,21 @@ function makeLink(text) {
   return escHtml(text)
     .replace(/\n/g, '<br>')
     .replace(/([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})/g,
-      '✉️ <a href="mailto:$1">$1</a>')
+      '<a href="mailto:$1">$1</a>')
     .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
 }
 
 // ===== CARRIER CARDS =====
 
-const svgIcon = d => `<svg class="card-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const svgIcon = d => `<svg class="card-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 const PHONE_ICON = svgIcon('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>');
 const CHAT_ICON = svgIcon('<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>');
 const NOTE_ICON = svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/>');
+const MAIL_ICON = svgIcon('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>');
+const FAX_ICON  = svgIcon('<path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/>');
+const PIN_ICON  = svgIcon('<path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>');
+const CLOCK_ICON = svgIcon('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>');
+const USER_ICON  = svgIcon('<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>');
 
 function buildServiceText(sc) {
   if (!sc) return '';
@@ -198,13 +203,13 @@ function renderCarrierCards(list, gridId) {
 // ===== MODAL =====
 
 const FIELD_ICONS = {
-  'Phone':  '📞',
-  'Email':  '✉️',
-  'Name':   '👤',
-  'Chat':   '💬',
-  'Note':   '📝',
-  'Hours':  '🕐',
-  'Fax':    '📠',
+  'Phone':  PHONE_ICON,
+  'Email':  MAIL_ICON,
+  'Name':   USER_ICON,
+  'Chat':   CHAT_ICON,
+  'Note':   NOTE_ICON,
+  'Hours':  CLOCK_ICON,
+  'Fax':    FAX_ICON,
 };
 
 function modalSection(title, badgeClass, fields) {
@@ -249,9 +254,9 @@ function openCarrierModal(idx) {
   // Customer Service Center — only if carrier has one
   if (sc && (sc.phone || sc.email)) {
     const scRows = [
-      sc.phone ? sc.phone.split('|').map(p => `<div class="modal-field"><span class="modal-field-icon">📞</span><span class="modal-field-val">${makeLink(p.trim())}</span></div>`).join('') : '',
-      sc.email ? sc.email.split('|').map(e => `<div class="modal-field"><span class="modal-field-icon">✉️</span><span class="modal-field-val">${makeLink(e.trim())}</span></div>`).join('') : '',
-      sc.hours ? `<div class="modal-field"><span class="modal-field-icon">🕐</span><span class="modal-field-val">${escHtml(sc.hours)}</span></div>` : '',
+      sc.phone ? sc.phone.split('|').map(p => `<div class="modal-field"><span class="modal-field-icon">${PHONE_ICON}</span><span class="modal-field-val">${makeLink(p.trim())}</span></div>`).join('') : '',
+      sc.email ? sc.email.split('|').map(e => `<div class="modal-field"><span class="modal-field-icon">${MAIL_ICON}</span><span class="modal-field-val">${makeLink(e.trim())}</span></div>`).join('') : '',
+      sc.hours ? `<div class="modal-field"><span class="modal-field-icon">${CLOCK_ICON}</span><span class="modal-field-val">${escHtml(sc.hours)}</span></div>` : '',
     ].join('');
     html += `
       <div class="modal-service-section">
@@ -394,9 +399,6 @@ function renderAgentGroups() {
 
 // ===== INTERNAL CONTACTS =====
 
-const MAIL_ICON = svgIcon('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>');
-const FAX_ICON  = svgIcon('<path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/>');
-const PIN_ICON  = svgIcon('<path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>');
 
 function contactLines(it) {
   const lines = [];
